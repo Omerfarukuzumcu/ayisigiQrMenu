@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Ayışığı Pasta & Cafe</title>
+</head>
+<body>
+    <nav style="background-color: peru;" class="nav2">Fırın Ürünleri</nav>
+    
+    {% for p in product %}
+
+    <ul class="special-menu pb-4">
+        
+        <li>
+            <div class="d-flex justify-content-start">
+                
+    
+                <div class="menu-text align-self-center">
+                    <h3>{{p.productName}}</h3>
+                    <p><span>{{p.description}}</span></p>
+                    <strong class="special-menu-price text-color-dark">₺{{p.price}}</strong>
+                </div>
+            </div>
+        </li>
+    
+    
+    </ul>
+    
+    {% endfor %}
+
+
+
+</body>
+</html>
